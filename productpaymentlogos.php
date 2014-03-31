@@ -33,7 +33,7 @@ class ProductPaymentLogos extends Module
 	{
 		$this->name = 'productpaymentlogos';
 		$this->tab = 'front_office_features';
-		$this->version = 1.2;
+		$this->version = 1.3;
 		$this->author = 'PrestaShop';
 		$this->need_instance = 0;
 
@@ -156,7 +156,6 @@ class ProductPaymentLogos extends Module
 						'type' => 'file',
 						'label' => $this->l('Block image'),
 						'name' => 'PRODUCTPAYMENTLOGOS_IMG',
-						'desc' => $this->l('If your shop\'s payment methods differ from the ones presented in the default image, then you must create your own image with the necessary logos.'),
 						'thumb' => '../modules/'.$this->name.'/img/'.Configuration::get('PRODUCTPAYMENTLOGOS_IMG'),
 					),
 					array(
