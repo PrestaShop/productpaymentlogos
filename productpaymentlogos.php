@@ -73,13 +73,6 @@ class ProductPaymentLogos extends Module
 			$this->smarty->assign('banner_img', 'img/'.Configuration::get('PRODUCTPAYMENTLOGOS_IMG'));
 			$this->smarty->assign('banner_link', Configuration::get('PRODUCTPAYMENTLOGOS_LINK'));
 			$this->smarty->assign('banner_title', Configuration::get('PRODUCTPAYMENTLOGOS_TITLE'));
-			$sql = 'SELECT COUNT(*)
-					FROM '._DB_PREFIX_.'store s'
-				.Shop::addSqlAssociation('store', 's');
-			$total = Db::getInstance()->getValue($sql);
-
-			if ($total <= 0)
-				return false;
 		}
 
 		return $this->display(__FILE__, 'productpaymentlogos.tpl', $this->getCacheId());
