@@ -33,7 +33,7 @@ class ProductPaymentLogos extends Module
 	{
 		$this->name = 'productpaymentlogos';
 		$this->tab = 'front_office_features';
-		$this->version = '1.3.2';
+		$this->version = '1.3.4';
 		$this->author = 'PrestaShop';
 		$this->need_instance = 0;
 
