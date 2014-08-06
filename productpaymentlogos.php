@@ -70,11 +70,12 @@ class ProductPaymentLogos extends Module
 			return;
 		if (!$this->isCached('productpaymentlogos.tpl', $this->getCacheId()))
 		{
-			$this->smarty->assign('banner_img', 'img/'.Configuration::get('PRODUCTPAYMENTLOGOS_IMG'));
-			$this->smarty->assign('banner_link', Configuration::get('PRODUCTPAYMENTLOGOS_LINK'));
-			$this->smarty->assign('banner_title', Configuration::get('PRODUCTPAYMENTLOGOS_TITLE'));
+			$this->smarty->assign(array(
+				'banner_img' => 'img/'.Configuration::get('PRODUCTPAYMENTLOGOS_IMG'),
+				'banner_link' => Configuration::get('PRODUCTPAYMENTLOGOS_LINK'),
+				'banner_title' => Configuration::get('PRODUCTPAYMENTLOGOS_TITLE')
+			));
 		}
-
 		return $this->display(__FILE__, 'productpaymentlogos.tpl', $this->getCacheId());
 	}
 
