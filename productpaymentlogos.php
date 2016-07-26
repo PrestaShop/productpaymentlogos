@@ -42,6 +42,8 @@ class ProductPaymentLogos extends Module
 
 		$this->displayName = $this->l('Product payment logos block');
 		$this->description = $this->l('Displays the logos of the available payment systems on the product page.');
+
+		$this->ps_versions_compliancy = array('min' => '1.6', 'max' => '1.6.99.99');
 	}
 
 	public function install()
